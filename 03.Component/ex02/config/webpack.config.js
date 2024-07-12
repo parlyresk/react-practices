@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve(`src/index.js`),
+        entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
             filename: 'assets/js/main.js',
@@ -17,14 +17,14 @@ module.exports = function(env) {
                 options: {
                     configFile: path.resolve('config/babel.config.json')
                 }
-            },{
+            }, {
                 test: /\.(c|sa|sc)ss$/i,
                 use:[
                     'style-loader', 
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: true
+                            modules: env['css-module'] !== 'false'
                         }
                     }, 
                     'sass-loader'
