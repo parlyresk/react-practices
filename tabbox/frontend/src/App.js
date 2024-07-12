@@ -4,7 +4,7 @@ import TabBox from './TabBox';
 import './assets/css/App.css';
 
 function App(props) {
-    
+
 
     return (
         <TabBox />

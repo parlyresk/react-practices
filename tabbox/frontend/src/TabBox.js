@@ -3,6 +3,7 @@ import Tabs from './Tabs';
 import TabView from './TabView';
 
 function TabBox() {
+
     const tabs = [
         {no: 1, name: '메뉴1', active: false, contents: '메뉴1의 뷰 내용'},
         {no: 2, name: '메뉴2', active: false, contents: '메뉴2의 뷰 내용'},
@@ -12,9 +13,10 @@ function TabBox() {
         {no: 6, name: '메뉴6', active: false, contents: '메뉴6의 뷰 내용'},
         {no: 7, name: '메뉴7', active: false, contents: '메뉴7의 뷰 내용'}
     ];
+
     return (
         <div className={'tab-box'}>
-            <Tabs tabs={tabs.map(e =>{
+            <Tabs tabs={tabs.map(e => {
                 const {contents, ...rest} = e;
                 return rest;
             })}/>
