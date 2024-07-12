@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './assets/scss/TabView.scss';
 function TabView(props) {
     return (
         <div>

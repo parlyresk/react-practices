@@ -1,6 +1,6 @@
 import React from 'react';
 import TabItem from './TabItem';
-
+import './assets/scss/Tabs.scss';
 function Tabs({tabs}) {
     return (
         <ul>

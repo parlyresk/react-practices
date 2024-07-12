@@ -27,14 +27,14 @@ body {
 
 /* --- */
 
-.tab-box {
+/* .tab-box {
 	width: fit-content;
 	margin: 100px auto;
-}
+} */
 
-.tab-box ul {
+/* .tab-box ul {
 	height: 24px;
-}
+} */
 
 .tab-box ul li {
 	float: right;
@@ -51,15 +51,15 @@ body {
 	cursor: pointer;
 }
 
-.tab-box ul li.active {
+/* .tab-box ul li.active {
 	background-color: #fc6;
-}
+} */
 
-.tab-box div {
+/* .tab-box div {
 	width: calc(100% - 4px);
 	height: 200px;
 	margin-top: -1px;
 	border: 1px solid #999;
 	text-align: center;
 	line-height: 200px;
-}
+} */
