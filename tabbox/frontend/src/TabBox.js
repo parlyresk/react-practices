@@ -7,11 +7,13 @@ import tabs from './assets/json/data';
 function TabBox() {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    
+
     return (
         <div className={Tab_Box}>
             <Tabs
                 selectTab={(no) => {
-
+                    setActiveIndex(no-1);
                 }} 
                 tabs={tabs.map((e, i) => {
                     const {contents, ...rest} = e;

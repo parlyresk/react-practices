@@ -5,7 +5,7 @@ function TabItem({name, active, selectTab}) {
     return (
         <li 
             className={[Tab_Item, (active ? 'active' : '')].join(' ')}
-            >
+            onClick={selectTab} >
             {name}
         </li>
     );
