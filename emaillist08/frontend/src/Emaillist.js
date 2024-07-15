@@ -1,19 +1,17 @@
 import React from 'react';
-import EmailItem from './EmailItem';
-import './assets/scss/Emaillist.scss';
-function Emaillist() {
-    const emails = [
-        { name: '둘리', email: 'dooly@gmail.com' },
-        { name: '마이콜', email: 'michol@gmail.com' },
-        { name: '도우너', email: 'douner@gmail.com' },
-        { name: '또치', email: 'ddochi@gmail.com' }
-    ];
+import {Email_List} from './assets/scss/Emaillist.scss';
+import Email from './Email';
 
+function Emaillist({emails}) {
     return (
-        <ul className="Emaillist">
-            {emails.map((emailItem, index) => (
-                <EmailItem key={index} name={emailItem.name} email={emailItem.email} />
-            ))}
+        <ul className={Email_List}>
+            {
+                emails.map(email => <Email
+                                        key={email.no}
+                                        firstName={email.firstName}
+                                        lastName={email.lastName}
+                                        email={email.email} />)
+            }
         </ul>
     );
 }

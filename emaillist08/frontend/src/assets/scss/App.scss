@@ -1,27 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@charset "utf-8";
 
-html,
-body {
-    font: 0.75em "맑은 고딕", 돋움, 굴림;
-    text-align: center;
-}
+html {
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-ul, ol {
-    list-style-type: none;
-}
+    body {
+        font: 0.75em "맑은 고딕", 돋움, 굴림;
+        text-align: center;
 
-#root {
-    width: 100%;
-}
-
-#App {
-    width: 300px;
-    margin: 5px auto 0 auto;
-    background-color: #f2f2f2;
-    border: 1px solid #d9d9d9;
-    border-radius: 2px;
-    padding: 7px;
+        :global(#root) {
+            width: 100%;
+        
+            :global(#App) {
+                width: 300px;
+                margin: 5px auto 0 auto;
+                background-color: #f2f2f2;
+                border:1px solid #d9d9d9;
+                border-radius: 2px;
+                padding: 7px;
+            }    
+        }
+    }
 }

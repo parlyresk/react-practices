@@ -1,4 +1,4 @@
-.tab-box ul li {
+.Tab_Item {
 	float: right;
 	border: 1px solid #999;
 	border-radius: 10px 10px 0 0;
@@ -11,9 +11,8 @@
 	
 	background-color: #ccc;
 	cursor: pointer;
-}
 
-.tab-box ul li.active {
-	background-color: #fc6;
+    &:global(.active) {
+        background-color: #fc6;
+    }    
 }
-

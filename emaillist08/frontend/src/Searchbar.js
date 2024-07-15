@@ -1,11 +1,14 @@
 import React from 'react';
-import './assets/scss/Searchbar.scss';
-function Searchbar() {
+import {Search_Bar} from './assets/scss/SearchBar.scss';
+
+function SearchBar() {
     return (
-        <div className="Searchbar">
-            <input type="text" placeholder="찾기" />
+        <div className={Search_Bar}>
+            <input
+                type='text'
+                placeholder='찾기' />
         </div>
     );
 }
 
-export default Searchbar;
+export default SearchBar;

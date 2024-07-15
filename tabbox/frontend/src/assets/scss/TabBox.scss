@@ -1,4 +1,6 @@
-.tab-box {
-	width: fit-content;
-	margin: 100px auto;
+:global(#App) {
+    .Tab_Box {
+        width: fit-content;
+        margin: 100px auto;
+    }
 }
