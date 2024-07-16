@@ -13,7 +13,9 @@ function TabBox() {
         <div className={Tab_Box}>
             <Tabs
                 selectTab={(no) => {
-                    setActiveIndex(no-1);
+                    // const index=tabs.map(e=>e.no).indexOf(no);
+                    
+                    setActiveIndex(tabs.findIndex(e=>e.no === no));
                 }} 
                 tabs={tabs.map((e, i) => {
                     const {contents, ...rest} = e;
