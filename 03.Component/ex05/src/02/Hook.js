@@ -37,6 +37,17 @@ export default function Hook({ color }) {
     useEffect(()=>{
         console.log('After Rendering text');
     },[text]);
+
+    /**
+     *  4. Alternative02: componentDidMount & componentWillUnmount
+     * 
+     */
+    useEffect(()=>{
+        console.log("After Mount(componentDidMount)");
+        return () => {
+            console.log("After Unmount(componentWillUnmount)");
+        };
+    },[]);
     return (
         <>
             <h3
