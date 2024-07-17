@@ -1,20 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Task from './Task';
-import {Task_List} from './assets/scss/TaskList.scss';
+
+import * as styles from './assets/scss/TaskList.scss';
 
 function TaskList({ tasks }) {
+    const setDone = (index)=>{
+        index=!index;
+    }
+    
+    
+      
     return (
-        <div className="Task_List">
+        <div className={styles.Task_List}>
             <ul>
                 {tasks.map((task) => (
                     <Task 
-                        key={task.no} 
+                         
                         text={task.name} 
                         done={task.done} 
+                        setDone={setDone}
                     />
                 ))}
             </ul>
-            <input className="Input_Add_Task" type="text" placeholder="태스크 추가" />
+            <input className={styles.Input_Add_Task} type="text" placeholder="태스크 추가" />
         </div>
     );
 }
