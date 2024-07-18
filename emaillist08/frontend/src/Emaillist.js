@@ -2,7 +2,7 @@ import React from 'react';
 import {Email_List} from './assets/scss/Emaillist.scss';
 import Email from './Email';
 
-function Emaillist({emails}) {
+function Emaillist({emails, deleteEmail}) {
     return (
         <ul className={Email_List}>
             {
@@ -12,7 +12,8 @@ function Emaillist({emails}) {
                                             no={email.no}
                                             firstName={email.firstName}
                                             lastName={email.lastName}
-                                            email={email.email} />)
+                                            email={email.email} 
+                                            deleteEmail={deleteEmail}/>)
 
             }
         </ul>
