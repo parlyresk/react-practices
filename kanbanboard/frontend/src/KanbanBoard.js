@@ -9,7 +9,7 @@ function KanbanBoard() {
     
     return (
         <div className={styles.Kanban_Board}>
-            {statuses.map((status, index) => (
+            {statuses.map((status) => (
                 <CardList 
                     
                     title={status} 
