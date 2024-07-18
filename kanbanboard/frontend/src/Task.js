@@ -5,7 +5,7 @@ function Task({ text, done, setDone }) {
   return (
     <li className={styles._Task}>
       <input type="checkbox" checked={done}  
-             onChange={setDone} />
+             onClick={setDone} />
       {text}
       <a href="#" className={styles.Task_Remove}></a>
     </li>
