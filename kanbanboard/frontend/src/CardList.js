@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-
 import * as styles from './assets/scss/CardList.scss';
 
 function CardList({ title, cards }) {
@@ -8,11 +7,11 @@ function CardList({ title, cards }) {
         <div className={styles.Card_List}>
             <h1>{title}</h1>
             {cards.map((card) => (
-                <Card 
-                    
-                    title={card.title} 
-                    details={card.description} 
-                    tasks={card.tasks} 
+                <Card
+                    key={card.no} 
+                    title={card.title}
+                    details={card.description}
+                    cardNo={card.no}
                 />
             ))}
         </div>

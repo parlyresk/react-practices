@@ -1,7 +1,7 @@
 export default [
   {
     "no": 1,
-    "title": "DB Scheme Design",
+    "title": "DB Scheme Designasdasd",
     "description": "프로젝트 Database 논리 모델링 작업",
     "status": "ToDo",
     "tasks": []

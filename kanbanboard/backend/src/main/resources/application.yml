@@ -107,5 +107,5 @@ logging:
       root: WARN
       com:
          poscodx:
-            emaillist:
+            kanbanboard:
                exception: ERROR

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kanbanboard">
+    <!-- Task 관련 -->
+    <select id="findByCardNo" parameterType="int" resultType="taskvo">
+        SELECT * FROM task WHERE card_no = #{cardNo}
+    </select>
+
+    <select id="findAllTasks" resultType="taskvo">
+        SELECT * FROM task
+    </select>
+    
+    <select id="getMaxTaskNo" resultType="int">
+    	SELECT COALESCE(MAX(no), 0) FROM task
+	</select>
+
+    <insert id="insert" parameterType="taskvo">
+        INSERT INTO task (name, done, card_no)
+        VALUES (#{name}, #{done}, #{cardNo})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM task WHERE no = #{no}
+    </delete>
+
+    <update id="update" parameterType="taskvo">
+        UPDATE task
+        SET name = #{name}, done = #{done}, card_no = #{cardNo}
+        WHERE no = #{no}
+    </update>
+    
+    <!-- Card 관련 -->
+    <select id="findAllCards" resultType="cardvo">
+    SELECT DISTINCT c.no, c.title, c.description, c.status
+    FROM card c
+    LEFT JOIN task t ON c.no = t.card_no
+</select>
+</mapper>
