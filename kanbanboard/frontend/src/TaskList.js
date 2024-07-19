@@ -55,7 +55,7 @@ function TaskList({  cardNo }) {
 
     const addTask = async (taskName) => {
         try {
-            // GET 요청으로 taskNo를 받아옵니다.
+           
             const taskNoResponse = await fetch('/api/taskno', {
                 method: 'GET',
                 headers: {
@@ -70,7 +70,7 @@ function TaskList({  cardNo }) {
             const taskNoJson = await taskNoResponse.json();
             const taskNo = taskNoJson.data; // taskNo 값 추출
     
-            // POST 요청으로 새로운 태스크를 생성합니다.
+            
             const response = await fetch('/api/tasks', {
                 method: 'POST',
                 headers: {
