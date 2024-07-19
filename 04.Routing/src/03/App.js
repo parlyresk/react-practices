@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter} from 'react-router-dom';
+import {HashRouter, BrowserRouter} from 'react-router-dom';
 import {Routes, Route} from 'react-router';
 import Main from "./component/Main";
 import Gallery from "./component/Gallery";
