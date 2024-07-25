@@ -3,9 +3,9 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve('src/index.js'),
+        entry: path.resolve(`src/index.js`),
         output: {
-            path: path.resolve(__dirname, 'build'),
+            path: path.resolve('../backend/src/main/resources'),
             filename: 'assets/js/main.js',
             assetModuleFilename: 'assets/images/[hash][ext]'
         },
