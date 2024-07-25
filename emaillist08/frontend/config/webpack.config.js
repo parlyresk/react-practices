@@ -1,16 +1,24 @@
 const path = require('path');
+const fs = require('fs');
+
+const outputPath = path.resolve(__dirname, '../backend/src/main/resources');
+
+// Ensure the output path exists
+if (!fs.existsSync(outputPath)){
+    fs.mkdirSync(outputPath, { recursive: true });
+}
 
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve(`src/index.js`),
+        entry: path.resolve('src/index.js'),
         output: {
-            path: path.resolve('../backend/src/main/resources'),
+            path: outputPath,
             filename: 'assets/js/main.js',
             assetModuleFilename: 'assets/images/[hash][ext]'
         },
         module: {
-            rules:[{
+            rules: [{
                 test: /\.js/i,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
@@ -19,14 +27,14 @@ module.exports = function(env) {
                 }
             }, {
                 test: /\.(c|sa|sc)ss$/i,
-                use:[
+                use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
                             modules: true
                         }
-                    }, 
+                    },
                     'sass-loader'
                 ]
             }, {
@@ -47,6 +55,6 @@ module.exports = function(env) {
                 context: ['/api'],
                 target: 'http://localhost:8080'
             }]
-        }    
+        }
     };
 }
